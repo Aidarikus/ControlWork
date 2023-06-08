@@ -1,13 +1,13 @@
 public static class Methods
 {
-    public static string InputString(string text)
+  public static string InputString(string text)
   {
     Console.Write(text);
     string element = Console.ReadLine();
     return element;
   }
 
-   public static int InputNumber(string text)
+  public static int InputNumber(string text)
   {
     Console.Write(text);
     int number = Convert.ToInt32(Console.ReadLine());
@@ -36,5 +36,30 @@ public static class Methods
     }
     Console.Write($"\"{array[i]}\"]");
     Console.WriteLine();
+  }
+
+  public static string[] GenerateNewArray(string[] array)
+  {
+    int size = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+      if (array[i].Length <= 3)
+      {
+        size += 1;
+      }
+    }
+
+    string[] arrayShort = new string[size];
+    int j = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+      if (array[i].Length <= 3)
+      {
+        arrayShort[j] = array[i];
+        j++;
+      }
+    }
+    Console.WriteLine();
+    return arrayShort;
   }
 }

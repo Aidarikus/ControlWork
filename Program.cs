@@ -6,4 +6,9 @@ Console.WriteLine(task1 + "\n" + task2);
 Console.WriteLine();
 
 string[] array = CreateStringArray();
+Console.WriteLine($"Исходный массив: ");
 PrintArray(array);
+
+string[] arrayShort = GenerateNewArray(array);
+Console.WriteLine($"Результат: ");
+PrintArray(arrayShort);
