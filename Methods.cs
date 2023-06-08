@@ -22,6 +22,19 @@ public static class Methods
     {
       array[i] = InputString($"Введите {i + 1} элемент массива: ");
     }
+    Console.WriteLine();
     return array;
+  }
+
+  public static void PrintArray(string[] array)
+  {
+    Console.Write("[");
+    int i = 0;
+    for (i = 0; i < array.Length - 1; i++)
+    {
+      Console.Write($"\"{array[i]}\", ");
+    }
+    Console.Write($"\"{array[i]}\"]");
+    Console.WriteLine();
   }
 }
