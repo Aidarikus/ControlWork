@@ -5,14 +5,14 @@ public static class Methods
     Console.Write(text);
     string element = Console.ReadLine();
     return element;
-  }
+  }  //Ввод элементов массива
 
   public static int InputNumber(string text)
   {
     Console.Write(text);
     int number = Convert.ToInt32(Console.ReadLine());
     return number;
-  }
+  }  //Ввод длины массива
 
   public static string[] CreateStringArray()
   {
@@ -24,10 +24,11 @@ public static class Methods
     }
     Console.WriteLine();
     return array;
-  }
+  }  //Создание и наполнение исходного массива
 
-  public static void PrintArray(string[] array)
+  public static void PrintArray(string[] array, string text)
   {
+    Console.WriteLine(text);
     Console.Write("[");
     int i = 0;
     for (i = 0; i < array.Length - 1; i++)
@@ -36,7 +37,7 @@ public static class Methods
     }
     Console.Write($"\"{array[i]}\"]");
     Console.WriteLine();
-  }
+  }  //Печать массива
 
   public static string[] GenerateNewArray(string[] array)
   {
@@ -48,7 +49,6 @@ public static class Methods
         size += 1;
       }
     }
-
     string[] arrayShort = new string[size];
     int j = 0;
     for (int i = 0; i < array.Length; i++)
@@ -61,5 +61,5 @@ public static class Methods
     }
     Console.WriteLine();
     return arrayShort;
-  }
+  }  //Создание и наполнение результативного массива
 }
