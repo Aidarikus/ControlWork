@@ -7,5 +7,10 @@ public static class Methods
     return element;
   }
 
-  
+   public static int InputNumber(string text)
+  {
+    Console.Write(text);
+    int number = Convert.ToInt32(Console.ReadLine());
+    return number;
+  }
 }
