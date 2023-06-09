@@ -46,7 +46,7 @@ public static class Methods
     {
       if (array[i].Length <= 3)
       {
-        size += 1;
+        size++;
       }
     }
     string[] arrayShort = new string[size];
