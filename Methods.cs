@@ -21,6 +21,11 @@ public static class Methods
         Console.WriteLine("Введено некорректное значение");
       }
     } while (!numberTrue);
+    if (number < 0)
+    {
+      number = number * (-1);
+      Console.WriteLine("Длина массива не может задаваться отрицательным числом. Числу присвоено положительное значение.");
+    }
     return number;
   }  //Ввод длины массива
 
