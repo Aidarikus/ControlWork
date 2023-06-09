@@ -9,8 +9,18 @@ public static class Methods
 
   public static int InputNumber(string text)
   {
-    Console.Write(text);
-    int number = Convert.ToInt32(Console.ReadLine());
+    int number;
+    bool numberTrue;
+    do
+    {
+      Console.Write(text);
+      string numberString = Console.ReadLine();
+      numberTrue = int.TryParse(numberString, out number);
+      if (!numberTrue)
+      {
+        Console.WriteLine("Введено некорректное значение");
+      }
+    } while (!numberTrue);
     return number;
   }  //Ввод длины массива
 
